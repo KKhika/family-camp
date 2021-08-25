@@ -544,11 +544,13 @@ footer {
 }
 
 .hidden.img__mountain img {
+  height: 100%;
   -webkit-transform: scale(1);
           transform: scale(1);
 }
 
 .hidden.img__design img {
+  height: 100%;
   -webkit-transform: scale(1);
           transform: scale(1);
 }

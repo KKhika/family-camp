@@ -436,9 +436,11 @@ footer {
 }
 
 .hidden.img__mountain img{
+  height: 100%;
   transform: scale(1);
 }
 .hidden.img__design img{
+  height: 100%;
   transform: scale(1);
 }
 @media screen and (max-width:1215px){
