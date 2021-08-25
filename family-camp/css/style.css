@@ -524,6 +524,7 @@ footer {
 }
 
 .img__mountain img {
+  height: 100%;
   -webkit-transition: all 3s;
   transition: all 3s;
   -o-object-fit: cover;
@@ -534,6 +535,7 @@ footer {
 }
 
 .img__design img {
+  height: 100%;
   -webkit-transition: all 3s;
   transition: all 3s;
   -o-object-fit: cover;
