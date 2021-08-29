@@ -46,23 +46,10 @@ h2 {
           align-items: center;
 }
 
-header {
-  border-top: 46px solid #000;
-  margin-bottom: 0px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-@media screen and (max-width: 767px) {
-  header {
-    border-top: 46px solid #a3e3f3;
-  }
-}
-
 .header__image {
   position: relative;
   height: 60vh;
-  background: #7BC2BA url("../images/image_00_head.jpg") no-repeat right center/cover;
+  background: #7BC2BA url("../images/image_05_nagasaki.jpg") no-repeat right center/cover;
   background-position: 50% 30%;
 }
 
@@ -100,9 +87,6 @@ header {
 }
 
 @media screen and (max-width: 767px) {
-  header.toggle_header {
-    border-top: 46px solid #000;
-  }
   .header__image {
     position: relative;
     height: 300px;
@@ -483,15 +467,12 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
   padding: 20px;
-}
-
-.menu__content:nth-of-type(2) {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
 }
 
 .menu__content-text {
@@ -525,6 +506,27 @@ footer {
   white-space: nowrap;
 }
 
+.menu__content-text-column span {
+  font-size: 1em;
+  width: auto;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(80%, transparent), color-stop(2, #ffc6c6));
+  background: linear-gradient(transparent 80%, #ffc6c6 2 0%);
+}
+
+.menu__content-text-column li {
+  padding: 10px 20px;
+  text-align: left;
+}
+
+.menu__content-text td {
+  text-align: left;
+  font-size: 1em;
+}
+
+.menu__content-text td span {
+  margin: 0px 20px;
+}
+
 .menu__content-image {
   -o-object-fit: contain;
      object-fit: contain;
@@ -532,11 +534,11 @@ footer {
       -ms-flex: 1;
           flex: 1;
   height: 600px;
+  overflow: hidden;
   padding: 150px 0px;
 }
 
 .img__design {
-  color: #4065e0;
   overflow: hidden;
   height: 300px;
   border-top: 5px solid #000;
@@ -544,7 +546,6 @@ footer {
 }
 
 .img__mountain {
-  color: #4065e0;
   overflow: hidden;
   height: 300px;
   border-top: 5px solid #000;
@@ -552,35 +553,37 @@ footer {
 }
 
 .img__mountain img {
-  height: 100%;
-  -webkit-transition: all 3s;
-  transition: all 3s;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-transform: scale(1.3);
-          transform: scale(1.3);
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  -webkit-transition: all 3s;
+  transition: all 3s;
   width: 100%;
 }
 
 .img__design img {
-  height: 100%;
-  -webkit-transition: all 3s;
-  transition: all 3s;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-transform: scale(1.3);
-          transform: scale(1.3);
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  -webkit-transition: all 3s;
+  transition: all 3s;
   width: 100%;
 }
 
 .hidden.img__mountain img {
-  height: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
   -webkit-transform: scale(1);
           transform: scale(1);
 }
 
 .hidden.img__design img {
-  height: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
   -webkit-transform: scale(1);
           transform: scale(1);
 }
@@ -613,15 +616,17 @@ footer {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .menu__content-text {
-    display: block;
-    padding: 20px;
-    position: relative;
-  }
   .menu__content-text p {
-    font-size: 1em;
-    position: absolute;
-    top: -70%;
+    font-size: 1.1em;
+    width: 80%;
+    margin: 20px auto 20px;
+    white-space: inherit;
+  }
+  .menu__content-text td {
+    font-size: 0.8em;
+  }
+  .menu__content-text td span {
+    margin: 0px 20px;
   }
   .menu__content-image {
     height: 300px;
@@ -642,8 +647,8 @@ footer {
        object-fit: cover;
     -webkit-transform: scale(1.5);
             transform: scale(1.5);
-    -webkit-transition: all 2s;
-    transition: all 2s;
+    -webkit-transition: all 3s;
+    transition: all 3s;
   }
   .hidden.img__mountain img {
     -o-object-fit: cover;
@@ -662,13 +667,13 @@ footer {
 /* ===========================
  共有
 =========================== */
-.btn {
+.btn a {
   -webkit-box-shadow: 2px 2px 0 0 #a3e3f3;
           box-shadow: 2px 2px 0 0 #a3e3f3;
   display: inline-block;
-  margin: 0 auto;
-  padding: 10px 20px;
-  width: auto;
+  margin: 10px auto;
+  padding: 10px 10px;
+  width: 300px;
   cursor: pointer;
   font-size: 1.3em;
   color: #a3e3f3;
@@ -677,17 +682,10 @@ footer {
   background-color: transparent;
 }
 
-.btn span {
-  background: -webkit-linear-gradient(0deg, #40E0D0, #FF8C00, #FF0080);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.btn:hover {
+.btn a:hover {
   -webkit-box-shadow: none;
           box-shadow: none;
   -webkit-transform: translate(2px, 2px);
           transform: translate(2px, 2px);
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style_solo_1.css.map */

@@ -401,13 +401,33 @@ footer {
 .footer {
   color: #fff;
   padding: 60px 0 70px;
-  background-color: #a3e3f3;
+  background-color: #000;
+}
+
+.footer__sns {
+  margin: 20px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 30%;
+}
+
+@media screen and (max-width: 767px) {
+  .footer__sns {
+    width: 80%;
+  }
+}
+
+.footer__sns svg {
+  width: 80px;
 }
 
 .footer h2 {
   color: #fff;
   font-size: 50px;
-  margin: 30px auto 80px;
+  margin: 30px auto 30px;
 }
 
 .footer__column--map {

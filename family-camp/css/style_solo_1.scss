@@ -50,19 +50,16 @@ h2 {
   align-items: center;
 }
 
-header {
-  border-top:46px solid #000;
-  margin-bottom: 0px;
-  transition: all 0.3s;
-  @include mq(md) {
-    border-top:46px solid #a3e3f3;
-  }
-}
+// header {
+//   border-top:46px solid #a3e3f3;
+//   margin-bottom: 0px;
+//   transition: all 0.3s;
+// }
 .header {
     &__image{
         position:relative;
         height:60vh;
-        background:#7BC2BA url('../images/image_00_head.jpg')no-repeat right center / cover;
+        background:#7BC2BA url('../images/image_05_nagasaki.jpg')no-repeat right center / cover;
         background-position: 50% 30%;
 
         & > .welcome {
@@ -99,12 +96,12 @@ header {
   }
 }
 @include mq(md) {
-  header {
+//   header {
 
-    &.toggle_header {
-        border-top: 46px solid #000;
-    }
-  }
+//     &.toggle_header {
+//         border-top: 46px solid #000;
+//     }
+//   }
   
   .header {
     &__image {
@@ -320,7 +317,6 @@ header {
     }
 }
       
-
 /* ===========================
  footer
 =========================== */
@@ -378,11 +374,6 @@ footer {
 }
 
 
-
-
-
-
-
 /* ===========================
  コンテンツ
 =========================== */
@@ -390,74 +381,93 @@ footer {
 .menu {
   width:1200px;
   margin:0 auto;
-}
-.menu__content{
-  display:flex;
-  text-align:center;
-  padding: 20px;
-  &:nth-of-type(2) {
-      flex-direction: row-reverse;
+
+  &__content {
+    display:flex;
+    flex-direction: column;
+    text-align:center;
+    padding: 20px;
+    &-text {
+        flex:1;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        & h3 {
+            margin:20px 0 50px;
+            font-size:1.3em;
+        }
+        & p {
+            font-size:1.3em;
+            width:65%;
+            margin:20px auto 20px;
+            white-space: nowrap;
+        }
+        &-column {
+            & span {
+                font-size: 1em;
+                width: auto;
+                background: linear-gradient(transparent 80%, #ffc6c6 2  0%);
+            }
+            & li {
+                padding: 10px 20px;
+                text-align: left;
+            }
+           
+        }
+        & td {
+            text-align: left;
+            font-size: 1em;
+
+            & span{
+                margin: 0px 20px;
+            }
+        }
+    }
+    &-image {
+        object-fit: contain;
+        flex:1;
+        height:600px;
+        overflow: hidden;
+        padding: 150px 0px;
+    }
   }
 }
-.menu__content-text{
-  flex:1;
-  flex-direction: column;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-.menu__content-text h3{
-  margin:20px 0 50px;
-  font-size:1.3em;
-}
-.menu__content-text p{
-  font-size:1.3em;
-  width:65%;
-  margin:20px auto 20px;
-  white-space: nowrap;
-}
-.menu__content-image{
-  object-fit: contain;
-  flex:1;
-  height:600px;
-  padding: 150px 0px;
-}
 .img__design {
-  color: #4065e0;
   overflow: hidden;
   height: 300px;
   border-top: 5px solid #000;
   border-bottom: 5px solid #000;
 }
 .img__mountain {
-  color: #4065e0;
   overflow: hidden;
   height: 300px;
   border-top: 5px solid #000;
   border-bottom: 5px solid #000;
 }
 .img__mountain img{
-  height: 100%;
-  transition: all 3s;
   object-fit: cover;
-  transform: scale(1.3);
+  transform: scale(1.5);
+  transition: all 3s;
   width: 100%;
 }
 .img__design img{
-  height: 100%;
-  transition: all 3s;
+  
   object-fit: cover;
-  transform: scale(1.3);
+  transform: scale(1.5);
+  transition: all 3s;
   width: 100%;
 }
 
 .hidden.img__mountain img{
-  height: 100%;
+  height: 300px;
+  object-fit: cover;
   transform: scale(1);
 }
 .hidden.img__design img{
-  height: 100%;
+  height: 300px;
+  object-fit: cover;
   transform: scale(1);
 }
 @media screen and (max-width:1215px){
@@ -467,32 +477,38 @@ footer {
 }
 
 @include mq(md){
-  .menu {
-    margin:0px auto 0;
-  }
-  .menu__content{
-    align-items: center;
-    display:flex;
-    flex-direction: column;
-    &:nth-of-type(2) {
-      flex-direction: column;
-    }
-  }
+    .menu {
+        margin:0px auto 0;
+        &__content{
+            align-items: center;
+            display:flex;
+            flex-direction: column;
+            &:nth-of-type(2) {
+                flex-direction: column;
+            }
 
-  .menu__content-text{
-    display: block;
-    padding: 20px;
-    position: relative;
-  }
-  .menu__content-text p{
-    font-size: 1em;
-    position: absolute;
-    top: -70%;
-  }
-  .menu__content-image{
-    height:300px;
-    width: 420px;
-  }
+            &-text {
+                & p {
+                    font-size:1.1em;
+                    width:80%;
+                    margin:20px auto 20px;
+                    white-space: inherit;                   
+                }
+                & td {
+                    font-size: 0.8em;
+
+                    & span{
+                        margin: 0px 20px;
+                    }
+                }
+            }
+            &-image {
+                height:300px;
+                width: 420px;
+            }
+        }
+    }
+
   .img__mountain img{
     height: 300px;
     object-fit: cover;
@@ -503,7 +519,7 @@ footer {
     height: 300px;
     object-fit: cover;
     transform: scale(1.5);
-    transition: all 2s;
+    transition: all 3s;
   }
   
   .hidden.img__mountain img{
@@ -521,13 +537,12 @@ footer {
 /* ===========================
  共有
 =========================== */
-.btn {
-  // border-radius: 50%;
+.btn a {
   box-shadow: 2px 2px 0 0 #a3e3f3;
   display:inline-block;
-  margin:0 auto;
-  padding:10px 20px;
-  width:auto;
+  margin:10px auto;
+  padding:10px 10px;
+  width:300px;
   cursor:pointer;
   font-size:1.3em;
   color: #a3e3f3;
@@ -535,12 +550,6 @@ footer {
   text-align:center;
   border: 2px solid #a3e3f3;
   background-color:transparent;
-    & span {
-      background: -webkit-linear-gradient(0deg, #40E0D0, #FF8C00, #FF0080);
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
 
     &:hover {
         box-shadow: none;

@@ -327,11 +327,23 @@ footer {
 .footer {
   color:#fff;
   padding:60px 0 70px;
-  background-color:#a3e3f3;
+  background-color:#000;
+  &__sns {
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+    @include mq(md) {
+      width: 80%;
+    }
+    & svg {
+      width: 80px;
+    }
+  }
   & h2 {
     color: #fff;
     font-size:50px;
-    margin:30px auto 80px;
+    margin:30px auto 30px;
   }
   &__text {
     @extend %text;
@@ -361,11 +373,6 @@ footer {
     }
   }
 }
-
-
-
-
-
 
 
 /* ===========================
