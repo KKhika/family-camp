@@ -1,0 +1,35 @@
+
+  .loader {
+      align-items: center;
+      background: #fff;
+      bottom: 0;
+      display: flex;
+      justify-content: center;
+      left: 0;
+      position: fixed;
+      right: 0;
+      top: 0;
+      z-index: 999;
+      &::after {
+        animation: loader 5s linear infinite;
+        // border: 3px solid #afb1ac;
+        border: 3px solid rgba(#ff00d4, 0.3);
+        border-radius: 0%;
+        border-right: 3px solid rgba(#FF8C00, 0.3);
+        border-top: 3px solid rgba(#40E0D0, 0.3);
+        border-left: 3px solid rgba(#4b40e0, 0.3);
+        content: "";
+        height: 70px;
+        width: 70px;
+      }
+    }
+    
+    @keyframes loader {
+      0% {
+        transform: rotate(0);
+      }
+    
+      100% {
+        transform: rotate(360deg);
+      }
+    }
