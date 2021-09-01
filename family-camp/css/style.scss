@@ -25,46 +25,71 @@ a {
 }
 
 /* ===========================
- header
+  背景変える場合
 =========================== */
-
-h1 {
-  font-size: 1.2em;
-  color: #a3e3f3;
-  background: -webkit-linear-gradient(0deg, #40E0D0, #FF8C00, #FF0080);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-left: 20px;
-  width: auto;
-}
-h2 {
-  font-size: 1em;
-  font-weight: small;
-  color: #FF8C00;
-  background-color: transparent;
-  margin-left: 20px;
-}
-.logo {
-  display: flex;
-  align-items: center;
-}
-
-header {
-  border-top:46px solid #000;
-  margin-bottom: 0px;
-  transition: all 0.3s;
+#canvas {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: #000;
   @include mq(md) {
-    border-top:46px solid #a3e3f3;
+    width: 100%;
   }
 }
+// #bg-image {
+  // position: fixed;
+  // top: 0;
+  // left: 0;
+  // right: 0;
+  // bottom: 0;
+  // background-image: url(../images/image_bg.jpg);
+  // background-size: auto 100%;
+  // height: 100%;
+// }
+
+
+/* ===========================
+ header
+=========================== */
 .header {
+    &__title {
+      position: relative;
+      // border-bottom:46px solid transparent;
+      background-color: #fff;
+      margin-bottom: 0px;
+      transition: all 0.3s;
+      @include mq(md) {
+        background-color: #fff;
+        // border-bottom:46px solid transparent;
+        margin-bottom: 46px;
+      }
+      & h1 {
+        font-size: 1.2em;
+        color: #a3e3f3;
+        background: -webkit-linear-gradient(0deg, #40E0D0, #FF8C00, #FF0080);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-left: 20px;
+        width: auto;
+      }
+      & h2 {
+        font-size: 1em;
+        font-weight: small;
+        color: #FF8C00;
+        background-color: transparent;
+        margin-left: 20px;
+      }
+      & .logo {
+        display: flex;
+        align-items: center;
+      }
+    }
     &__image{
         position:relative;
         height:60vh;
-        background:#7BC2BA url('../images/image_00_head.jpg')no-repeat right center / cover;
-        background-position: 50% 30%;
-
+        background:#7BC2BA url('../images/image_bg.jpg')no-repeat right center / cover;
+        background-position: 80% 60%;
         & > .welcome {
             position: absolute;
             top: 50%;
@@ -78,6 +103,7 @@ header {
             & > svg {
                 width: 80%;
                 height: 100%;
+                background-color: #000;
             }
             &.hidden svg path {
                 fill: #f0f0f0;
@@ -88,7 +114,7 @@ header {
                 animation: 1s ease-in-out forwards 0.1s textanimation ;
               
             }
-        }
+        }    
     }
 }
 
@@ -99,10 +125,11 @@ header {
   }
 }
 @include mq(md) {
-  header {
-
-    &.toggle_header {
-        border-top: 46px solid #000;
+  
+  .toggle_header {
+    & .header__title {
+      // border-bottom: 0px solid transparent;
+      margin-bottom: 0px;
     }
   }
   
@@ -144,7 +171,12 @@ header {
 =========================== */
 .mobile-menu {
   &__contain {
-    background: -webkit-linear-gradient(0deg, #40E0D0, #FF8C00, #FF0080);
+    // background: -webkit-linear-gradient(0deg,#40E0D0, #FF8C00, #FF0080,rgba(255, 255, 255, 0.1));
+    background: -webkit-linear-gradient(0deg,#40E0D0, #FF8C00, #FF0080,);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 10;
   }
   &__btn-wrap {
     height: 0px;
@@ -234,6 +266,7 @@ header {
     margin:0 auto;
     display:flex;
     justify-content: space-around;
+    position: relative;
   }
   
   &__main-item {
@@ -244,7 +277,7 @@ header {
       justify-content: center;
       align-items: center;
       height:100%;
-      color:#fff;
+      color: #fff;
     }
   }                
 }
@@ -253,17 +286,17 @@ header {
 
   .mobile-menu {
     &__main-wrap {
-      background: -webkit-linear-gradient(0deg, #40E0D0, #FF8C00, #FF0080);
+      background: -webkit-linear-gradient(0deg,#40E0D0, #FF8C00, #FF0080,rgba(255, 255, 255, 0.1));
       z-index: 1;
     }
     &__main-list {
-      width:100%;
+      width:0px;
       height: 0px;
       flex-wrap:wrap;
       visibility: hidden;
     }
     &__main-item {
-      transform: translateX(300px);
+      transform: translateX(250px);
       height:0px;
       transition: height 0.3s,transform 1s;
       & a{
@@ -281,6 +314,7 @@ header {
       & .mobile-menu {
         &__main-list {
           height: auto;
+          width: 100%;
           flex-wrap:wrap;
           visibility: visible;
         }
@@ -326,6 +360,7 @@ header {
 =========================== */
 footer {
   text-align:center;
+  position: relative;
 }
 .footer {
   color:#fff;
@@ -390,6 +425,8 @@ footer {
 .menu {
   width:1200px;
   margin:0 auto;
+  position: relative;
+  color: #fff;
 }
 .menu__content{
   display:flex;
@@ -427,15 +464,14 @@ footer {
   color: #4065e0;
   overflow: hidden;
   height: 300px;
-  border-top: 5px solid #000;
-  border-bottom: 5px solid #000;
+  transition: box-shadow 2s;
+  box-shadow: 0px 10px 0px 0px rgba(0, 0, 0, 1),0px -10px 0px 0px rgba(0, 0, 0, 1);
 }
 .img__mountain {
   color: #4065e0;
   overflow: hidden;
   height: 300px;
-  border-top: 5px solid #000;
-  border-bottom: 5px solid #000;
+  box-shadow: 0px 10px 0px 0px rgba(0, 0, 0, 1),0px -10px 0px 0px rgba(0, 0, 0, 1);
 }
 .img__mountain img{
   height: 100%;
@@ -451,7 +487,6 @@ footer {
   transform: scale(1.3);
   width: 100%;
 }
-
 .hidden.img__mountain img{
   height: 100%;
   transform: scale(1);

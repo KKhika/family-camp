@@ -16,9 +16,40 @@ a {
 }
 
 /* ===========================
+  背景変える場合
+=========================== */
+#canvas {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: #000;
+}
+
+@media screen and (max-width: 767px) {
+  #canvas {
+    width: 100%;
+  }
+}
+
+/* ===========================
  header
 =========================== */
-h1 {
+.header__title {
+  position: relative;
+  background-color: #fff;
+  margin-bottom: 0px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+@media screen and (max-width: 767px) {
+  .header__title {
+    background-color: #fff;
+    margin-bottom: 46px;
+  }
+}
+
+.header__title h1 {
   font-size: 1.2em;
   color: #a3e3f3;
   background: -webkit-linear-gradient(0deg, #40E0D0, #FF8C00, #FF0080);
@@ -29,7 +60,7 @@ h1 {
   width: auto;
 }
 
-h2 {
+.header__title h2 {
   font-size: 1em;
   font-weight: small;
   color: #FF8C00;
@@ -37,7 +68,7 @@ h2 {
   margin-left: 20px;
 }
 
-.logo {
+.header__title .logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -46,24 +77,11 @@ h2 {
           align-items: center;
 }
 
-header {
-  border-top: 46px solid #000;
-  margin-bottom: 0px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-@media screen and (max-width: 767px) {
-  header {
-    border-top: 46px solid #a3e3f3;
-  }
-}
-
 .header__image {
   position: relative;
   height: 60vh;
-  background: #7BC2BA url("../images/image_00_head.jpg") no-repeat right center/cover;
-  background-position: 50% 30%;
+  background: #7BC2BA url("../images/image_bg.jpg") no-repeat right center/cover;
+  background-position: 80% 60%;
 }
 
 .header__image > .welcome {
@@ -81,6 +99,7 @@ header {
 .header__image > .welcome > svg {
   width: 80%;
   height: 100%;
+  background-color: #000;
 }
 
 .header__image > .welcome.hidden svg path {
@@ -100,8 +119,8 @@ header {
 }
 
 @media screen and (max-width: 767px) {
-  header.toggle_header {
-    border-top: 46px solid #000;
+  .toggle_header .header__title {
+    margin-bottom: 0px;
   }
   .header__image {
     position: relative;
@@ -157,6 +176,10 @@ header {
 =========================== */
 .mobile-menu__contain {
   background: -webkit-linear-gradient(0deg, #40E0D0, #FF8C00, #FF0080);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .mobile-menu__btn-wrap {
@@ -252,6 +275,7 @@ header {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  position: relative;
 }
 
 .mobile-menu__main-item {
@@ -275,19 +299,19 @@ header {
 
 @media screen and (max-width: 767px) {
   .mobile-menu__main-wrap {
-    background: -webkit-linear-gradient(0deg, #40E0D0, #FF8C00, #FF0080);
+    background: -webkit-linear-gradient(0deg, #40E0D0, #FF8C00, #FF0080, rgba(255, 255, 255, 0.1));
     z-index: 1;
   }
   .mobile-menu__main-list {
-    width: 100%;
+    width: 0px;
     height: 0px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     visibility: hidden;
   }
   .mobile-menu__main-item {
-    -webkit-transform: translateX(300px);
-            transform: translateX(300px);
+    -webkit-transform: translateX(250px);
+            transform: translateX(250px);
     height: 0px;
     -webkit-transition: height 0.3s,-webkit-transform 1s;
     transition: height 0.3s,-webkit-transform 1s;
@@ -302,6 +326,7 @@ header {
   }
   .menu-open .mobile-menu__main-list {
     height: auto;
+    width: 100%;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     visibility: visible;
@@ -412,6 +437,7 @@ header {
 =========================== */
 footer {
   text-align: center;
+  position: relative;
 }
 
 .footer {
@@ -477,6 +503,8 @@ footer {
 .menu {
   width: 1200px;
   margin: 0 auto;
+  position: relative;
+  color: #fff;
 }
 
 .menu__content {
@@ -539,16 +567,20 @@ footer {
   color: #4065e0;
   overflow: hidden;
   height: 300px;
-  border-top: 5px solid #000;
-  border-bottom: 5px solid #000;
+  -webkit-transition: -webkit-box-shadow 2s;
+  transition: -webkit-box-shadow 2s;
+  transition: box-shadow 2s;
+  transition: box-shadow 2s, -webkit-box-shadow 2s;
+  -webkit-box-shadow: 0px 10px 0px 0px black, 0px -10px 0px 0px black;
+          box-shadow: 0px 10px 0px 0px black, 0px -10px 0px 0px black;
 }
 
 .img__mountain {
   color: #4065e0;
   overflow: hidden;
   height: 300px;
-  border-top: 5px solid #000;
-  border-bottom: 5px solid #000;
+  -webkit-box-shadow: 0px 10px 0px 0px black, 0px -10px 0px 0px black;
+          box-shadow: 0px 10px 0px 0px black, 0px -10px 0px 0px black;
 }
 
 .img__mountain img {

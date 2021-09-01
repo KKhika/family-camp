@@ -17,8 +17,4 @@ const so = new IntersectionObserver(cb);
 
 so.observe(mountain)
 so.observe(design)
-// so.observe(main_sv_kv);
-// main_sv_kv.forEach(function(val){
-//     so.observe(val);
-// });
 

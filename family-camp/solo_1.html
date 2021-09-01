@@ -8,10 +8,15 @@
   <link rel="stylesheet" href="css/style_solo_1.css">
 </head>
 <body>
-   <div id="js-loader" class="loader"></div>
-  <h2>-キャンプLifeを応援するサイト-</h2>
-  <div class="logo"><h1>Start camping</h1><a href="index.html"><img src="images/image_camp1.svg" alt="キャンプLifeを応援するサイト" width="120px" height="46px"></a></div>
-  <header></header>
+   <!-- <div id="js-loader" class="loader"></div> -->
+  
+  <header>
+    <h2>-キャンプLifeを応援するサイト-</h2>
+    <div class="logo">
+      <h1>Start camping</h1>
+      <a href="index.html"><img src="images/image_camp1.svg" alt="キャンプLifeを応援するサイト" width="120px" height="46px"></a>
+    </div>
+  </header>
     <div class="mobile-menu__contain">
       <div class="mobile-menu__flex">
             <div class="mobile-menu__btn-wrap">
@@ -43,27 +48,37 @@
         <div class="menu__content-text">
           <h3>ソロキャンプの魅力｜<br>圧倒的な自由を感じよう</h3>
           <p>必要道具一式〜ソロキャンプ編〜</p>
-          <ul class="menu__content-text-column">
-            <span>身軽さと時短を意識した、アイテム7選</span> 
-            <li>・テント</li>
-            <li>・シュラフ（寝袋）</li>
-            <li>・マット</li>
-            <li>・ランタン or ヘッドライト</li>
-            <li>・テーブル＆チェア</li>
-            <li>・調理用バーナー</li>
-            <li>・クッカー（調理器具）</li>
-          </ul>
-          <table>
-            <tr><td> 11:30〜</td> <td><span>チェックイン</span></td> <td>プランによって時間が変わるので注意が必要</td></tr>
-            <tr><td> 12:00〜</td>	<td><span>テント周りの設営</span></td> <td>チェックイン後すぐがおすすめ</td></tr> 
-            <tr><td> 16:00〜</td> <td><span>火の準備</span></td> <td>夜は冷えるので料理の2時間程度前がおすすめ</td></tr>
-            <tr><td> 18:00〜 </td> <td><span>夜ご飯の準備</span></td> <td> 程よく手を抜いて作るのがポイント</td></tr>
-            <tr><td> 22:00〜	</td> <td><span>就寝</span></td> 	<td>周りの人のことを考えて大きな声は控える</td></tr>
-            <tr><td> 08:00〜 </td>	<td><span>起床</span></td>  <td>朝ご飯はカンタンにできるものがおすすめ</td></tr>
-            <tr><td> 09:00〜 </td> <td><span>片付け</span></td>	<td>ゴミは決められたところに捨てましょう</td></tr>
-            <tr> <td> 10:30〜 </td> <td><span>チェックアウト</span></td> <td>早めの準備が大切</td></tr>
-  
-          </table>  
+          <span>身軽さと時短を意識した、アイテム7選</span> 
+          <dl class="acMenu">
+            <dt class="menu__content-text-column btn">
+              テント 
+            </dt>  
+            <dd>テント</dd>
+            <dt class="menu__content-text-column btn">
+              シュラフ（寝袋） 
+            </dt>  
+            <dd>シュラフ（寝袋）</dd>
+            <dt class="menu__content-text-column btn">
+              マット 
+            </dt>  
+            <dd>マット</dd>
+            <dt class="menu__content-text-column btn">
+              ランタン or ヘッドライト
+            </dt>  
+            <dd>ランタン or ヘッドライト</dd>
+            <dt class="menu__content-text-column btn">
+              テーブル＆チェア
+            </dt> 
+            <dd>テーブル＆チェア</dd>
+            <dt class="menu__content-text-column btn">
+              調理用バーナー
+            </dt> 
+            <dd>調理用バーナー</dd>
+            <dt class="menu__content-text-column btn">
+              ・クッカー（調理器具）
+            </dt> 
+            <dd>・クッカー（調理器具）</dd>
+          </dl>
         </div>
         <div class="menu__content-image">
           <div class="img__mountain">
@@ -75,13 +90,13 @@
         <div class="menu__content-text">
           <h3>最高のにキャンプにするために</h3>
           <p> 道具選びのコツ7選</p>
-          <div class="btn"><a href="">タープ or テント</a></div>
-          <div class="btn"><a href="">コンロ or 焚き火</a></div>
-          <div class="btn"><a href="">燃料</a></div>
-          <div class="btn"><a href="">クーラーバック</a></div>
-          <div class="btn"><a href="">テーブル/椅子</a></div>
-          <div class="btn"><a href="">食器/調理道具</a></div>
-          <div class="btn"><a href="">ゴミ袋</a></div>
+          <div class="btn">タープ or テント</a></div>
+          <div class="btn">コンロ or 焚き火</a></div>
+          <div class="btn">燃料</a></div>
+          <div class="btn">クーラーバック</a></div>
+          <div class="btn">テーブル/椅子</a></div>
+          <div class="btn">食器/調理道具</a></div>
+          <div class="btn">ゴミ袋</a></div>
 
         </div>
         <div class="menu__content-image">
@@ -121,7 +136,8 @@
       </footer>
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="js/loader.js"></script>
+<!-- <script src="js/loader.js"></script> -->
+<script src="js/acMenu.js"></script>
 <script src="js/so_beginner.js"></script>
 <script src = "js/mobile-menu.js"></script>
 </body>

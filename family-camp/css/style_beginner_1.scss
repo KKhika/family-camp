@@ -254,13 +254,13 @@ h2 {
       z-index: 1;
     }
     &__main-list {
-      width:100%;
+      width:0px;
       height: 0px;
       flex-wrap:wrap;
       visibility: hidden;
     }
     &__main-item {
-      transform: translateX(300px);
+      transform: translateX(250px);
       height:0px;
       transition: height 0.3s,transform 1s;
       & a{
@@ -278,6 +278,7 @@ h2 {
       & .mobile-menu {
         &__main-list {
           height: auto;
+          width: 100%;
           flex-wrap:wrap;
           visibility: visible;
         }

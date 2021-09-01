@@ -263,15 +263,15 @@ h2 {
     z-index: 1;
   }
   .mobile-menu__main-list {
-    width: 100%;
+    width: 0px;
     height: 0px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     visibility: hidden;
   }
   .mobile-menu__main-item {
-    -webkit-transform: translateX(300px);
-            transform: translateX(300px);
+    -webkit-transform: translateX(250px);
+            transform: translateX(250px);
     height: 0px;
     -webkit-transition: height 0.3s,-webkit-transform 1s;
     transition: height 0.3s,-webkit-transform 1s;
@@ -285,6 +285,7 @@ h2 {
     height: 0px;
   }
   .menu-open .mobile-menu__main-list {
+    width: 100%;
     height: auto;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -506,25 +507,23 @@ footer {
   white-space: nowrap;
 }
 
-.menu__content-text-column span {
+.menu__content-text span {
   font-size: 1em;
   width: auto;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(80%, transparent), color-stop(2, #ffc6c6));
   background: linear-gradient(transparent 80%, #ffc6c6 2 0%);
 }
 
-.menu__content-text-column li {
-  padding: 10px 20px;
-  text-align: left;
-}
-
-.menu__content-text td {
-  text-align: left;
+.menu__content-text dt {
+  padding: 10px 10px;
   font-size: 1em;
+  text-align: left;
 }
 
-.menu__content-text td span {
-  margin: 0px 20px;
+.menu__content-text dd {
+  padding: 10px 10px;
+  text-align: left;
+  display: none;
 }
 
 .menu__content-image {
@@ -667,10 +666,10 @@ footer {
 /* ===========================
  共有
 =========================== */
-.btn a {
+.btn {
   -webkit-box-shadow: 2px 2px 0 0 #a3e3f3;
           box-shadow: 2px 2px 0 0 #a3e3f3;
-  display: inline-block;
+  display: block;
   margin: 10px auto;
   padding: 10px 10px;
   width: 300px;
@@ -682,7 +681,7 @@ footer {
   background-color: transparent;
 }
 
-.btn a:hover {
+.btn:hover {
   -webkit-box-shadow: none;
           box-shadow: none;
   -webkit-transform: translate(2px, 2px);
