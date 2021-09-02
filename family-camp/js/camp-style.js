@@ -7,7 +7,7 @@ $(function(){
         i = i + 1;
         if(i%3 == 0) {
             $('.camp-style').html('<span>Solo</span>（ソロキャンプ）');
-            img__mountain.html('<img src="images/image_02_solo.jpg" alt=""></img>');
+            img__mountain.html('<img src="images/image_07_solo.jpg" alt=""></img>');
         }else if(i%3 ==1) {
             $('.camp-style').html('<span>Duo</span>（デュオキャンプ）');
             img__mountain.html('<img src="images/image_03_couple.png" alt=""></img>');

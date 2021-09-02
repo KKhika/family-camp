@@ -3,6 +3,17 @@ const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
+
+  let Widt_text = function(){
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+
+
+$(window).resize(function(){
+  Widt_text();
+})
+
 window.requestAnimationFrame = 
   window.requestAnimationFrame ||
   window.mozRequestAnimationFrame ||
