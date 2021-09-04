@@ -5,13 +5,19 @@
   <title>ポートフォリオ_キャンプ_超初心者</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/loader.css">
+  <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/style_beginner_1.css">
+  <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
-   <div id="js-loader" class="loader"></div>
-  <h2>-キャンプLifeを応援するサイト-</h2>
-  <div class="logo"><h1>Start camping</h1><a href="index.html"><img src="images/image_camp1.svg" alt="キャンプLifeを応援するサイト" width="120px" height="46px"></a></div>
-  <header></header>
+  <div id="js-loader" class="loader"></div>
+ 
+  <header>
+      <div class="header__title">
+        <h2>-キャンプLifeを応援するサイト-</h2>
+        <div class="logo"><h1>Start camping</h1><a href="index.html"><img src="images/image_camp1.svg" alt="キャンプLifeを応援するサイト" width="120px" height="46px"></a></div>
+      </div>
+  </header>
     <div class="mobile-menu__contain">
       <div class="mobile-menu__flex">
             <div class="mobile-menu__btn-wrap">
@@ -42,7 +48,8 @@
       <div class="menu__content">
         <div class="menu__content-text">
           <h3>キャンプ初心者必見｜<br>一日の流れや道具選びのコツ</h3>
-          <p>キャンプの１日の流れ</p>
+          <!-- <p>キャンプの１日の流れ</p> -->
+          <h4>キャンプの1日の流れ</h4>
           <table>
             <tr><td> 11:30〜</td> <td><span>チェックイン</span></td> <td>プランによって時間が変わるので注意が必要</td></tr>
             <tr><td> 12:00〜</td>	<td><span>テント周りの設営</span></td> <td>チェックイン後すぐがおすすめ</td></tr> 
@@ -51,29 +58,120 @@
             <tr><td> 22:00〜	</td> <td><span>就寝</span></td> 	<td>周りの人のことを考えて大きな声は控える</td></tr>
             <tr><td> 08:00〜 </td>	<td><span>起床</span></td>  <td>朝ご飯はカンタンにできるものがおすすめ</td></tr>
             <tr><td> 09:00〜 </td> <td><span>片付け</span></td>	<td>ゴミは決められたところに捨てましょう</td></tr>
-            <tr> <td> 10:30〜 </td> <td><span>チェックアウト</span></td> <td>早めの準備が大切</td></tr>
+            <tr><td> 10:30〜 </td> <td><span>チェックアウト</span></td> <td>早めの準備が大切</td></tr>
   
           </table>  
+           <img src="images/image_camp1.svg" alt="キャンプLifeを応援するサイト" class = "middle_logo" width="120px" height="46px">
         </div>
-        <div class="menu__content-image">
+        <!-- <div class="menu__content-image">
           <div class="img__mountain">
             <img src="images/image_02_solo.jpg" alt="">
           </div>
         </div>
-      </div>
+      </div> -->
+     
       <div class="menu__content">
         <div class="menu__content-text">
-          <h3>最高のにキャンプにするために</h3>
-          <p> 道具選びのコツ7選</p>
-          <div class="btn"><a href="">タープ or テント</a></div>
-          <div class="btn"><a href="">コンロ or 焚き火</a></div>
-          <div class="btn"><a href="">燃料</a></div>
-          <div class="btn"><a href="">クーラーバック</a></div>
-          <div class="btn"><a href="">テーブル/椅子</a></div>
-          <div class="btn"><a href="">食器/調理道具</a></div>
-          <div class="btn"><a href="">ゴミ袋</a></div>
-
-        </div>
+          <h3>初心者が揃えておきたい道具リスト</h3>
+          <!-- <p> デイキャンプ編</p> -->
+          <h4>デイキャンプ編</h4> 
+          <dl class="acMenu">
+            <dt class="menu__content-text-column btn">
+              タープ or テント
+            </dt>  
+            <dd>  
+              日陰や風除けがあるだけかなり快適になりますのでデイキャンプでも1つは用意しておきたいアイテム
+            </dd>
+            <dt class="menu__content-text-column btn">
+              コンロ or 焚き火 
+            </dt>  
+            <dd>
+              焚き火や、料理を作るときに必要です。手軽に済ませたいならコンビニで食料を買うのもOK！
+            </dd>
+            <dt class="menu__content-text-column btn">
+              燃料 
+            </dt>  
+            <dd>
+              燃料があると着火が早く、時間短縮に繋がります。特にデイキャンプでは時間が命！手早く料理に移りたい人向けです。
+            </dd>
+            <dt class="menu__content-text-column btn">
+              クーラーバック
+            </dt>  
+            <dd>
+              食材や飲み物運ぶときに使用します。料理など温かいものを運びたい人は2つバッグがあると便利です。
+            </dd>
+            <dt class="menu__content-text-column btn">
+              テーブル＆チェア
+            </dt> 
+            <dd>
+              食事をしたり、休憩するときに必要な道具です。必需品なので忘れないようにしましょう。
+            </dd>
+            <dt class="menu__content-text-column btn">
+              食器/調理道具
+            </dt> 
+            <dd>
+              キャンプ場によってはレンタルすることも可能です。しかしレンタル代がかかってしまうのでなるべく自分で用意しましょう。また紙皿や割り箸を持っていくと後片付けをカンタンに済ませることができます。
+            </dd>
+            <dt class="menu__content-text-column btn">
+              ゴミ袋
+            </dt> 
+            <dd>
+              食事などで出たゴミを入れるために必要です。ゴミ捨て場が用意されているキャンプ場もありますが、持参しておくことをおすすめです。
+            </dd>
+          </dl>
+          <div class="menu__content-image">
+            <div class="img__mountain">
+              <img src="images/image_02_solo.jpg" alt="">
+            </div>
+          </div>
+        
+          <h3>初心者が揃えておきたい道具リスト</h3>
+          <!-- <p> デイキャンプ編</p> -->
+          <h4>テント泊編</h4> 
+          <dl class="acMenu">
+            <dt class="menu__content-text-column btn">
+              タープ or テント
+            </dt>  
+            <dd>  
+              日陰や風除けがあるだけかなり快適になりますのでデイキャンプでも1つは用意しておきたいアイテム
+            </dd>
+            <dt class="menu__content-text-column btn">
+              コンロ or 焚き火 
+            </dt>  
+            <dd>
+              焚き火や、料理を作るときに必要です。手軽に済ませたいならコンビニで食料を買うのもOK！
+            </dd>
+            <dt class="menu__content-text-column btn">
+              燃料 
+            </dt>  
+            <dd>
+              燃料があると着火が早く、時間短縮に繋がります。特にデイキャンプでは時間が命！手早く料理に移りたい人向けです。
+            </dd>
+            <dt class="menu__content-text-column btn">
+              クーラーバック
+            </dt>  
+            <dd>
+              食材や飲み物運ぶときに使用します。料理など温かいものを運びたい人は2つバッグがあると便利です。
+            </dd>
+            <dt class="menu__content-text-column btn">
+              テーブル＆チェア
+            </dt> 
+            <dd>
+              食事をしたり、休憩するときに必要な道具です。必需品なので忘れないようにしましょう。
+            </dd>
+            <dt class="menu__content-text-column btn">
+              食器/調理道具
+            </dt> 
+            <dd>
+              キャンプ場によってはレンタルすることも可能です。しかしレンタル代がかかってしまうのでなるべく自分で用意しましょう。また紙皿や割り箸を持っていくと後片付けをカンタンに済ませることができます。
+            </dd>
+            <dt class="menu__content-text-column btn">
+              ゴミ袋
+            </dt> 
+            <dd>
+              食事などで出たゴミを入れるために必要です。ゴミ捨て場が用意されているキャンプ場もありますが、持参しておくことをおすすめです。
+            </dd>
+          </dl>
         <div class="menu__content-image">
           <div class="img__design">
             <img src="images/image_01_kumamoto.jpg" alt="">
@@ -112,6 +210,7 @@
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="js/loader.js"></script>
+<script src="js/acMenu.js"></script>
 <script src="js/so_beginner.js"></script>
 <script src = "js/mobile-menu.js"></script>
 </body>
